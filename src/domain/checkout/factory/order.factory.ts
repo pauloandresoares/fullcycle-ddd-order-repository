@@ -7,9 +7,11 @@ interface OrderFactoryProps {
   items: {
     id: string;
     name: string;
+    price: number;
+    totalPrice: number;
     productId: string;
     quantity: number;
-    price: number;
+    
   }[];
 }
 
@@ -20,6 +22,7 @@ export default class OrderFactory {
         item.id,
         item.name,
         item.price,
+        item.totalPrice,
         item.productId,
         item.quantity
       );
